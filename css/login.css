@@ -1,6 +1,6 @@
 body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #007bff, #0056b3, #003f7f);
+    background-color: #f4c542; /* Updated background color */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -12,11 +12,11 @@ body {
 }
 
 .container {
-    width: 90%;
-    max-width: 600px;
+    width: 95%;
+    max-width: 800px;
     background-color: rgba(255, 255, 255, 0.95);
     padding: 25px;
-    border-radius: 15px;
+    border-radius: 18px;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
     margin: 20px auto;
     flex: 1;
@@ -86,7 +86,7 @@ body {
 }
 
 .password-container input {
-    padding-right: 10px;
+    padding-right: 1px;
 }
 
 .password-container button {
