@@ -1,0 +1,200 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #007bff, #0056b3, #003f7f);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+    flex: 1;
+}
+
+/* Logo Styles */
+.logo .left-brace, .logo .right-brace {
+    font-size: 4em;
+}
+
+.logo .left-brace {
+    color: #343a40;
+}
+
+.logo .right-brace {
+    color: #f4c542;
+}
+.logo .right-brace::after {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #f4c542; /* Original yellow color */
+    margin-left: 5px;
+    transform: translate(-10%, -10%);
+}
+.slogan {
+    font-size: 1.2rem; /* Adjust as needed */
+    color: #333; /* Adjust color to match your design */
+    font-style: italic;
+}
+
+/* Form Styles */
+.form-container {
+    text-align: center;
+}
+
+.toggle-btns {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.toggle-btns button {
+    width: 45%;
+    padding: 10px;
+    border: none;
+    background-color: #f4c542;
+    color: white;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+.form input, .form select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.password-container {
+    position: relative;
+}
+
+.password-container input {
+    padding-right: 10px;
+}
+
+.password-container button {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #0056b3;
+    cursor: pointer;
+}
+
+#password-strength {
+    margin-top: 5px;
+    font-size: 14px;
+    text-align: left;
+}
+
+button[type="submit"] {
+    background-color: #f4c542;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px auto; /* Center the button horizontally */
+    display: block; /* Make the button take up the full width of its container */
+}
+
+.switch-text {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+#employee-fields {
+    display: none;
+    text-align: center;
+}
+
+/* Center the sign-up form */
+#signup-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer {
+    width: 100%;
+    text-align: center;
+    padding: 1px;
+    background-color: rgba(255, 255, 255, 0.95);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    font-size: 14px;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .toggle-btns {
+        flex-direction: column;
+    }
+
+    .toggle-btns button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+}
+@media (max-width: 600px) {
+    .welcome-container {
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1200px) {
+    .welcome-container {
+        padding: 40px;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    p {
+        font-size: 1.1em;
+    }
+
+    button {
+        padding: 12px 25px;
+        font-size: 1.1em;
+    }
+}

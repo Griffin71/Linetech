@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Line Tech - Login/Sign Up</title>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <span class="left-brace">{</span>
+            <span class="right-brace">}</span>
+        </div>
+			 <div class="slogan">
+        Plug into Possibility
+    </div>
+        <form id="login-form" class="form">
+            <header><h2>Welcome Back!</h2></header>
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" autocomplete="username" required>
+            
+            <label for="password">Password</label>
+            <div class="password-container">
+                <input type="password" id="password" name="password" autocomplete="current-password" required>
+                <button type="button" id="toggle-password" onclick="togglePassword()">Show</button>
+            </div>
+            
+            <button type="submit">Login</button>
+            <p class="switch-text">Don't have an account? <a href="#" onclick="showSignUp()">Sign Up</a></p>
+        </form>
+
+        <form id="signup-form" class="form" style="display: none;">
+            <header><h2>Welcome to our team :)</h2></header>
+            <input type="text" placeholder="First Name" required>
+            <input type="text" placeholder="Last Name" required>
+            <input type="text" placeholder="Username" required>
+            <input type="email" placeholder="Email" required>
+            <div class="password-container">
+                <input type="password" id="signup-password" placeholder="Password" required oninput="checkPasswordStrength()">
+                <button type="button" id="toggle-signup-password" onclick="toggleSignUpPassword()">Show</button>
+            </div>
+            <div class="password-container">
+                <input type="password" id="confirm-password" placeholder="Confirm Password" required oninput="checkPasswordMatch()">
+                <button type="button" id="toggle-confirm-password" onclick="toggleConfirmPassword()">Show</button>
+            </div>
+            <div id="password-strength"></div>
+            <div id="password-match-alert" style="color: red;"></div>
+
+            <!-- Employee Option -->
+            <label for="employee-check">Are you an employee?</label>
+            <input type="checkbox" id="employee-check" onclick="toggleEmployeeFields()">
+            
+            <div id="employee-fields">
+                <label for="employee-role">Your Role in the Company</label>
+                <select id="employee-role">
+                    <option value="" disabled selected>Select your role</option>
+                    <!-- Role options here -->
+                    <option value="Founder">Founder</option>
+											<option value="Project Manager">Project Manager</option>
+											<option value="UI/UX Designer">UI/UX Designer</option>
+											<option value="Software Developer">Software Developer</option>
+											<option value="Front-End Developer">Front-End Developer</option>
+											<option value="Back-End Developer">Back-End Developer</option>
+											<option value="Full-Stack Developer">Full-Stack Developer</option>
+											<option value="DevOps Engineer">DevOps Engineer</option>
+											<option value="System Administrator">System Administrator</option>
+											<option value="Database Administrator">Database Administrator</option>
+											<option value="Quality Assurance Engineer">Quality Assurance Engineer</option>
+											<option value="Network Engineer">Network Engineer</option>
+											<option value="Security Analyst">Security Analyst</option>
+											<option value="Graphic Designer">Graphic Designer</option>
+											<option value="Product Designer">Product Designer</option>
+											<option value="IT Manager">IT Manager</option>
+											<option value="Chief Technology Officer (CTO)">Chief Technology Officer (CTO)</option>
+											<option value="Technical Support Specialist">Technical Support Specialist</option>
+											<option value="IT Support Technician">IT Support Technician</option>
+											<option value="Help Desk Analyst">Help Desk Analyst</option>
+											<option value="Data Scientist">Data Scientist</option>
+											<option value="Data Analyst">Data Analyst</option>
+											<option value="Business Analyst">Business Analyst</option>
+											<option value="Cloud Engineer">Cloud Engineer</option>
+											<option value="AI/ML Engineer">AI/ML Engineer</option>
+											<option value="Cybersecurity Analyst">Cybersecurity Analyst</option>
+											<option value="Scrum Master">Scrum Master</option>
+                </select>
+            </div>
+
+            <button type="submit" id="signup-submit" disabled>Sign Up</button>
+            <p class="switch-text">Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
+        </form>
+    </div>
+
+    <div class="footer">
+        <footer>
+            <p>&copy; 2024 Line Tech Inc. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="js/login.js"></script>
+</body>
+</html>
